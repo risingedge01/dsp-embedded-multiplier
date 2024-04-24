@@ -31,25 +31,25 @@ module mult_8x8_Ca #(parameter word_size = 8)
     wire [7:0] prod1, prod2, prod3, prod4;
 
     // Module instantiation for multiplication components
-    mult_accurate inst1_mult (
+    mult_approx inst1_mult (
         .a(A[3:0]),
         .b(B[3:0]),
         .prod(prod1)
     );
 
-    mult_accurate inst2_mult (
+    mult_approx inst2_mult (
         .a(A[7:4]),
         .b(B[3:0]),
         .prod(prod2)
     );
 
-    mult_accurate inst3_mult (
+    mult_approx inst3_mult (
         .a(A[3:0]),
         .b(B[7:4]),
         .prod(prod3)
     );
 
-    mult_accurate inst4_mult (
+    mult_approx inst4_mult (
         .a(A[7:4]),
         .b(B[7:4]),
         .prod(prod4)
